@@ -1,14 +1,83 @@
-@font-face {
+/*mise en place de la police*/
+
+@font-face 
+{
     font-family: 'raleway';
     src: url(Raleway-VariableFont_wght.ttf);
 }
 
-#bloc-page
+/*structuration du body*/
+
+* 
 {
-font-family: Raleway;
+    box-sizing: border-box;
+}
+
+.container
+{
+    font-family: Raleway;
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: 20px;
+    width: auto;
+    margin: 2.5%;
+}
+
+.container > * 
+{
+    grid-column: col-start / span 12;
+}
+
+/*mise en place des media queries*/
+
+/*smartphone*/
+
+@media (max-width: 768px) 
+{
+
+}
+
+/*tablette*/
+
+@media (min-width: 769px) and (max-width: 992px) 
+{
+
+}
+
+/*ecran pc et tv*/
+
+@media (min-width: 993px) 
+{
+    .logo
+    {
+        grid-column: col-start 1 / span 1;
+        grid-row: 1;
+    }
+    .paragraph1
+    {
+        grid-column: col-start 1 / span 4;
+        grid-row: 2;
+    }
+    .menu
+    {
+        grid-column: col-start 9 / span 3;
+        grid-row: 1;
+    }
+}
+
+.logo
+{
+    width: auto;
 }
 
 ul
 {
-list-style-type: none;
+    list-style-type: none;
+    display: flex;
+
+}
+
+header
+{
+    display:flex;
 }
