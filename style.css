@@ -8,76 +8,181 @@
 
 /*structuration du body*/
 
-* 
+body
 {
-    box-sizing: border-box;
+    margin-top: 0;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 .container
 {
-    font-family: Raleway;
+    font-family: 'raleway';
+    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.1fr 1.75fr 1.45fr 0.55fr;
+    grid-template-areas:
+    "header header header"
+    "infos infos infos"
+    "lodging lodging mostpop"
+    "activities activities activities"
+    "footer footer footer";
     grid-gap: 20px;
-    width: auto;
-    margin: 2.5%;
 }
 
-.container > * 
+.header
 {
-    grid-column: col-start / span 12;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "logo logo nav"
+    "paragraph1 paragraph1 paragraph1"
+    "searchbar searchbar searchbar"
+    "filter filter filter";
+    grid-gap: 20px;
 }
 
 /*mise en place des media queries*/
 
 /*smartphone*/
 
-@media (max-width: 768px) 
+@media only screen and (max-width: 768px) 
 {
 
 }
 
 /*tablette*/
 
-@media (min-width: 769px) and (max-width: 992px) 
+@media only screen and (min-width: 769px) and (max-width: 992px) 
 {
 
 }
 
 /*ecran pc et tv*/
 
-@media (min-width: 993px) 
+@media only screen and (min-width: 993px) 
 {
-    .logo
-    {
-        grid-column: col-start 1 / span 1;
-        grid-row: 1;
-    }
-    .paragraph1
-    {
-        grid-column: col-start 1 / span 4;
-        grid-row: 2;
-    }
-    .menu
-    {
-        grid-column: col-start 9 / span 3;
-        grid-row: 1;
-    }
+    
+}
+
+/*Mise en place de grid-area sur les différents blocks de la page*/
+
+.header
+{
+    grid-area: header;
 }
 
 .logo
 {
-    width: auto;
+    grid-area: logo;
+}
+
+.paragraph1
+{
+    grid-area: paragraph1;
+}
+
+.nav
+{
+    grid-area: nav;
+}
+
+.searchbar
+{
+    grid-area: searchbar;
+}
+
+.filter
+{
+    grid-area: filter;
+}
+
+.infos
+{
+    grid-area: infos;
+}
+
+.lodging
+{
+    grid-area: lodging;
+}
+
+.mostpop
+{
+    grid-area: mostpop;
+}
+
+.actvities
+{
+    grid-area: activities;
+}
+
+.footer
+{
+    grid-area: footer;
+}
+
+
+
+#reservia
+{
+    width: 120px;
+    margin-top: 50px;
 }
 
 ul
 {
-    list-style-type: none;
+    list-style: none;
     display: flex;
-
+    margin-top: 50px;
+    padding-left: 0;
+    margin-left: 200px;
+    font-size: 20px;
+    height: 100px;
+    margin-top: 1px;
+    margin-bottom: 0;
 }
 
-header
+ul li
 {
-    display:flex;
+    padding-right: 50px;
+    padding-left: 50px;  
+}
+
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover
+{
+    text-decoration: solid;
+    color: #0065FC;
+    border-top: 3px #0065FC solid;
+}
+
+a:focus
+{
+    text-decoration: solid;
+    color: #0065FC;
+    border-top: 3px #0065FC solid;
+}
+
+h1
+{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+#mapmarker
+{
+    width: 20px;
+    background-color: #F2F2F2;
+    background-position: 50px 50px;
+
 }
