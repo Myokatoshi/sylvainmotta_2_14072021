@@ -8,16 +8,10 @@
 
 /*structuration du body*/
 
-body
-{
-    display: block;
-    font-family: "Raleway", "Sans serif";
-    margin: 0;
-}
-
 .container
 {
-    height: 100vh;
+    margin: 0;
+    font-family: "Raleway", "Sans serif";
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3.3fr 0.55fr;
@@ -25,50 +19,56 @@ body
     "header"
     "main"
     "footer";
-    grid-gap: 20px;
 }
 
 .header
 {
     display: grid;
-    grid-template-columns: 0.2fr 2.5fr 1fr;
-    grid-template-rows: 0.6fr 0.6fr 0.6fr 1fr;
+    grid-template-columns: 0.2fr 2.9fr 1fr auto;
     grid-template-areas:
-    "logo . nav"
-    "paragraph1 paragraph1 paragraph1"
-    "searchbar searchbar searchbar"
-    "filter filter filter";
-    grid-gap: 20px;
+    "logo . nav register"
+    "paragraph1 paragraph1 paragraph1 paragraph1"
+    "searchbar searchbar searchbar searchbar"
+    "filter filter filter filter";
 }
 
 .main
 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 1.75fr 1.45fr;
     grid-template-areas:
-    "infos infos infos"
-    "lodging lodging mostpop"
-    "activities activities activities";
-    grid-gap: 20px;
+    "infos"
+    "hostinglobal"
+    "activities";
 }
 
+.hostinglobal
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "hosting mostpop";
+}
 
 /*Mise en place de grid-area sur les différents blocks de la page*/
 
 .header
 {
     grid-area: header;
-    max-width: 1440px;
     margin: auto;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 
 .logo
 {
     grid-area: logo;
+    height: 90px;
     display: flex;
     place-items: center;
     justify-content: space-around;
+    
 }
 
 .paragraph1
@@ -79,6 +79,11 @@ body
 .nav
 {
     grid-area: nav;
+}
+
+.register
+{
+    grid-area: register;
 }
 
 .searchbar
@@ -94,7 +99,6 @@ body
 .main
 {
     grid-area: main;
-    max-width: 1440px;
     margin: auto;
 }
 
@@ -103,9 +107,14 @@ body
     grid-area: infos;
 }
 
-.lodging
+#hosting
 {
-    grid-area: lodging;
+    grid-area: hosting;
+}
+
+.hostinglobal
+{
+    grid-area: hostinglobal;
 }
 
 .mostpop
@@ -113,7 +122,7 @@ body
     grid-area: mostpop;
 }
 
-.actvities
+#actvities
 {
     grid-area: activities;
 }
@@ -126,6 +135,7 @@ body
 #reservia
 {
     width: 95px;
+    padding-right: 25px;
 }
 
 ul
@@ -135,6 +145,7 @@ ul
     margin-top: 50px;
     padding-left: 0;
     font-size: 16px;
+    font-weight: 500;
     height: 90px;
     margin-top: 0;
     margin-bottom: 0;
@@ -149,10 +160,11 @@ li
 .register
 {
     display: flex;
+    place-items: center;
+    padding-left: 25px;
     font-weight: bold;
     color: #0065FC;
     text-decoration: none;
-    width: 90px;
     justify-content: space-around;
 }
 
@@ -160,10 +172,9 @@ li
 {
     text-decoration: none;
     color: black;
-    height: 90px;
+    padding: 2.1rem;
     display: flex;
     place-items: center;
-    width: 150px;
     justify-content: space-around;
     
 }
@@ -172,12 +183,7 @@ li
 {
     text-decoration: solid;
     color: #0065FC;
-    border-top: 6px #0065FC solid;
-}
-
-.register:hover
-{
-    font-size: 18px;
+    border-top: 3px #0065FC solid;
 }
 
 .linknav:focus
@@ -193,7 +199,6 @@ h1
     font-weight: bold;
     margin-top: 25px;
     margin-bottom: 0;
-    margin-top: 0;
 }
 
 h3
@@ -204,7 +209,6 @@ h3
 .texth1
 {
     margin-top: 5px;
-    margin-bottom: 0;
 }
 
 .searchbar
@@ -219,8 +223,8 @@ h3
 
 .blockbar1
 {
-    width: 50px;
-    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
     background-color: #F2F2F2;
     display: flex;
     place-items: center;
@@ -240,7 +244,6 @@ h3
     border-style: none;
     width: 100%;
     height: 100%;
-    margin: 0;
     padding: 15px;
     font-weight: bold;
     font-size: 18px;
@@ -249,15 +252,6 @@ h3
 
 .blockbar3
 {
-    background-color: #0065FC;
-    height: 50px;
-    width: 135px;
-    border-radius: 0 15px 15px 0;
-}
-
-.buttonresearch
-{
-    text-decoration: none;
     color: white;
     height: 50px;
     width: 135px;
@@ -267,18 +261,31 @@ h3
     place-items: center;
 }
 
+.buttonresearch
+{
+    text-decoration: none;
+    background-color: #0065FC;
+    height: 50px;
+    width: 135px;
+    border-radius: 0 15px 15px 0;
+}
+
+.search
+{
+    display: none;
+}
+
 #filters
 {
     margin-right: 25px;
     font-size: 25px;
 }
 
-
-
 .filter
 {
     display: flex;
     place-items: center;
+    margin-top: 20px;
 }
 
 .economic
@@ -460,6 +467,7 @@ h3
 .buttonani
 {
     width: 230px;
+    height: 51px;
     display: flex;
     place-items: center;
     text-decoration: none;
