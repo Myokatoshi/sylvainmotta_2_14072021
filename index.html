@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="media.css"/>
     
     <title>Reservia</title>
 </head>
@@ -41,9 +42,9 @@
             
             <section class="searchbar">
 
-                <div class="blockbar1">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
+                <span class="blockbar1">
+                    <i class="fas fa-map-marker-alt mapmarker"></i>
+                </span>
 
                 <div class="blockbar2">
                     <input class="searchtext" type="search" placeholder="Marseille, France" size="1">
@@ -59,61 +60,57 @@
 
                 <h3 id="filters">Filtres</h3>
 
-                <div class="economic">
-
-                    <a class="buttoneco" href="#">
-
-                        <div class="blockmoney">
-                            <i class="fas fa-money-bill-wave"></i>
-                        </div>
+                <a class="buttoneco" href="#">
+                
+ 
+                    <div class="economic">
+                        <span class="blockmoney">
+                            <i class="fas fa-money-bill-wave moneybill"></i>
+                        </span>
 
                         <h3>Économique</h3>
-                        
-                    </a>
-                </div>
+                    </div> 
+                    
+                </a>
 
-                <div class="family">
+                <a class="buttonfam" href="#">
 
-                    <a class="buttonfam" href="#">
-
-                        <div class="blockfam">
-                            <img src="fonts/child-solid.svg" alt="human" id="human">
-                        </div>
+                    <div class="family">
+                        <span class="blockfam">
+                            <i class="fas fa-solid fa-child child"></i>
+                        </span>
 
                         <h3>Familial</h3>
+                    </div>
+                
+                </a>    
 
-                    </a>
+                <a class="buttonrom" href="#">
 
-                </div>
-                    
-                <div class="romantic">
-
-                    <a class="buttonrom" href="#">
-
-                        <div class="blockrom">
-                            <img src="fonts/heart-solid.svg" alt="heart" id="heart">
-                        </div>
+                    <div class="romantic">
+                        <span class="blockrom">
+                            <i class="fas fa-solid fa-heart heart"></i>
+                        </span>
 
                         <h3>Romantique</h3>
+                    </div>
+                
+                </a>    
 
-                    </a>
+                <a class="buttonani" href="#">
 
-                </div>
-
-                <div class="animals">
+                    <div class="animals">
                     
-                    <a class="buttonani" href="#">
-
-                        <div class="blockani">
-                            <img src="fonts/dog-solid.svg" alt="dog" id="dog">
-                        </div>
+                        <span class="blockani">
+                            <i class="fas fa-solid fa-dog dog"></i>
+                        </span>
 
                         <h3>Animaux autorisés</h3>
-
-                    </a>
-
-                </div>
-            
+                    
+                    </div>
+                    
+                </a>    
+                                
             </section>
 
         </header>
@@ -122,9 +119,9 @@
 
             <div class="infos">
 
-                <div class="blockinfos">
-                    <img src="fonts/info-solid.svg" alt="infos" id="infos">
-                </div>
+                <span class="blockinfos">
+                    <i class="fas fa-solid fa-info info"></i>
+                </span>
 
                 <p>Plus de 500 logements sont disponibles dans cette ville</p>
 
