@@ -57,8 +57,6 @@
 {
     grid-area: header;
     margin: auto;
-    padding-left: 35px;
-    padding-right: 35px;
 }
 
 .logo
@@ -74,26 +72,38 @@
 .paragraph1
 {
     grid-area: paragraph1;
+    padding-right: 35px;
+    padding-left: 35px;
 }
 
 .nav
 {
     grid-area: nav;
+    display: flex;
+    align-items: center;
 }
 
 .register
 {
     grid-area: register;
+    padding-right: 35px;
+    padding-left: 25px;
 }
 
 .searchbar
 {
     grid-area: searchbar;
+    padding-right: 35px;
+    padding-left: 35px;
 }
 
 .filter
 {
     grid-area: filter;
+    padding-right: 35px;
+    padding-left: 35px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .main
@@ -136,36 +146,17 @@
 {
     width: 95px;
     padding-right: 25px;
-}
-
-ul
-{
-    list-style: none;
-    display: flex;
-    margin-top: 50px;
-    padding-left: 0;
-    font-size: 16px;
-    font-weight: 500;
-    height: 90px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-li
-{
-    display: flex;
-    place-items: center;
+    padding-left: 35px;
 }
 
 .register
 {
     display: flex;
     place-items: center;
-    padding-left: 25px;
     font-weight: bold;
     color: #0065FC;
     text-decoration: none;
-    justify-content: space-around;
+    
 }
 
 .linknav
@@ -173,10 +164,11 @@ li
     text-decoration: none;
     color: black;
     padding: 2.1rem;
-    display: flex;
-    place-items: center;
-    justify-content: space-around;
-    
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .linknav:hover
@@ -201,7 +193,7 @@ h1
     margin-bottom: 0;
 }
 
-h3
+h2
 {
     font-size: 16px;
 }
@@ -277,15 +269,25 @@ h3
 
 #filters
 {
-    margin-right: 25px;
+    margin-right: 30px;
+    margin-bottom: 25px;
+    margin-top: 0;
     font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.filtersearch
+{
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .filter
 {
     display: flex;
-    place-items: center;
-    margin-top: 20px;
+    align-items: center;
+    margin-top: 30px;
 }
 
 .economic
@@ -295,7 +297,6 @@ h3
     display: flex;
     place-items: center;
 }
-
 
 .moneybill
 {
@@ -319,7 +320,7 @@ h3
 {
     width: 180px;
     display: flex;
-    place-items: center;
+    align-items: center;
     justify-content: space-around;
     text-decoration: none;
     color: black;
@@ -327,7 +328,8 @@ h3
     border: 2.5px #D9D9D9 solid;
     border-radius: 30px 30px 30px 30px;
     border-left: none;
-    margin-right: 25px;
+    margin-right: 30px;
+    margin-bottom: 25px;
 }
 
 .buttoneco:hover
@@ -371,14 +373,15 @@ h3
     width: 145px;
     height: 51px;
     display: flex;
-    place-items: center;
+    align-items: center;
     text-decoration: none;
     color: black;
     justify-content: space-around;
     border: 2.5px #D9D9D9 solid;
     border-radius: 30px 30px 30px 30px;
     border-left: none;
-    margin-right: 25px;
+    margin-right: 30px;
+    margin-bottom: 25px;
 }
 
 .buttonfam:hover
@@ -420,14 +423,15 @@ h3
     width: 180px;
     height: 51px;
     display: flex;
-    place-items: center;
+    align-items: center;
     text-decoration: none;
     color: black;
     justify-content: space-around;
     border: 2.5px #D9D9D9 solid;
     border-radius: 30px 30px 30px 30px;
     border-left: none;
-    margin-right: 25px;
+    margin-right: 30px;
+    margin-bottom: 25px;
 }
 
 .buttonrom:hover
@@ -469,14 +473,15 @@ h3
     width: 230px;
     height: 51px;
     display: flex;
-    place-items: center;
+    align-items: center;
     text-decoration: none;
     color: black;
     justify-content: space-around;
     border: 2.5px #D9D9D9 solid;
     border-radius: 30px 30px 30px 30px;
     border-left: none;
-    margin-right: 25px;
+    margin-right: 30px;
+    margin-bottom: 25px;
 }
 
 .buttonani:hover
