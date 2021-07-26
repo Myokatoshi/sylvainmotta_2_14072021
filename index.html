@@ -14,109 +14,125 @@
     <title>Reservia</title>
 </head>
 
+<!--BODY-->
 <body class="container">
 
-    
+         <!--HEADER-->   
         <header class="header">
 
+            <!--LOGO-->
             <div class="logo"><img src="Projet2-Reservia/images/logo/Reservia@3x.png" alt="Reservia" id="reservia"></div>
-            
-            <div class="paragraph1">
+            <!--LOGO-->
 
+            <!--H1+TEXT-->
+            <div class="paragraph1">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p class="texth1">En plein centre ville ou en pleine nature</p>
-
             </div>
+            <!--H1+TEXT-->
 
+            <!--NAV-->
             <nav class="nav">
                     <a class="linknav" href="#hosting">Hébergements</a>
                     <a class="linknav" href="#activities">Activités</a>    
             </nav>
+            <!--NAV-->
 
+            <!--REGISTER-->
             <a class="register" href="#">S'inscrire</a>
-            
-            <section class="searchbar">
+            <!--REGISTER-->
+
+            <!--SEARCHBAR-->
+            <div class="searchbar">
 
                 <span class="blockbar1">
                     <i class="fas fa-map-marker-alt mapmarker"></i>
                 </span>
 
-                <div class="blockbar2">
+                <span class="blockbar2">
                     <input class="searchtext" type="search" placeholder="Marseille, France" size="1">
-                </div>
+                </span>
 
-                
-                <a class="buttonresearch" href="#">
-
-                    <div class="blockbar3">
-                        <span class="research">Rechercher</span>
-                        <i class="fas fa-search search"></i>
-                    </div>
-
-                </a>    
-                
-
-            </section>
+                <button class="buttonresearch">
+                    <span class="research">Rechercher</span>
+                    <i class="fas fa-search search"></i>
+                </button>
+                             
+            </div>
+            <!--SEARCHBAR-->
             
+            <!--FILTERS-->
             <section class="filter">
 
                 <h2 id="filters">Filtres</h2>
 
-                <a class="buttoneco" href="#">
-                
- 
-                    <div class="economic">
-                        <span class="blockmoney">
-                            <i class="fas fa-money-bill-wave moneybill"></i>
-                        </span>
+                <div class="economic">
 
-                        <span class="filtersearch">Économique</span>
-                    </div> 
+                    <p>
+                        <a class="buttoneco" href="#">
+
+                            <span class="blockmoney">
+                                <i class="fas fa-money-bill-wave moneybill"></i>
+                            </span>
+                            <span class="filtersearch">Économique</span>
+
+                        </a>    
+                    </p>
+
+                </div> 
                     
-                </a>
+                <div class="family">
 
-                <a class="buttonfam" href="#">
+                    <p>
+                        <a class="buttonfam" href="#">
 
-                    <div class="family">
                         <span class="blockfam">
                             <i class="fas fa-solid fa-child child"></i>
                         </span>
-
                         <span class="filtersearch">Familial</span>
-                    </div>
+
+                        </a>
+                    </p>
                 
-                </a>    
+                </div>    
 
-                <a class="buttonrom" href="#">
+                <div class="romantic">
 
-                    <div class="romantic">
-                        <span class="blockrom">
-                            <i class="fas fa-solid fa-heart heart"></i>
-                        </span>
+                    <p>
+                        <a class="buttonrom" href="#">
 
-                        <span class="filtersearch">Romantique</span>
-                    </div>
+                            <span class="blockrom">
+                                <i class="fas fa-solid fa-heart heart"></i>
+                            </span>
+                            <span class="filtersearch">Romantique</span>
+
+                        </a>
+                    </p>    
                 
-                </a>    
+                </div>    
 
-                <a class="buttonani" href="#">
+                <div class="animals">
 
-                    <div class="animals">
-                    
-                        <span class="blockani">
-                            <i class="fas fa-solid fa-dog dog"></i>
-                        </span>
+                    <p>
+                        <a class="buttonani" href="#">
 
-                        <span class="filtersearch">Animaux autorisés</span>
+                            <span class="blockani">
+                                <i class="fas fa-solid fa-dog dog"></i>
+                            </span>
+                            <span class="filtersearch">Animaux autorisés</span>
+
+                        </a>
+                    </p>
                     
-                    </div>
-                    
-                </a>    
+                </div>    
                                 
             </section>
+            <!--FILTERS-->
 
         </header>
+        <!--HEADER-->
 
+        <!--MAIN-->
         <main class="main">
 
             <div class="infos">
@@ -131,20 +147,150 @@
             
             <section class="hostinglobal">
 
-                <div id="hosting">hosting</div>
+                <div class="hosting">
+
+                    <h2 class="hostinglobaltitle">Hébergements à Marseille</h2>
+
+                    <article class="hostinglist1">
+                        
+                        <figure class="hostingfigure">
+                            <img src="/Projet2-Reservia/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge-la-Cannebière" class="hostingpicture">
+                            <figcaption><h3>Auberge la Cannebière</h3></figcaption>
+                        </figure>
+
+                        <p class="hostingprice">Nuit à partir de <strong>25€</strong></p>
+
+                        <span class="hostingstars">
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star emptystar"></i>
+                        </span>
+
+                    </article>
+
+                    <article class="hostinglist2">
+                        
+                        <figure class="hostingfigure">
+                            <img src="/Projet2-Reservia/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hôtel-du-port" class="hostingpicture">
+                            <figcaption><h3>Hôtel du port</h3></figcaption>
+                        </figure>
+
+                        <p class="hostingprice">Nuit à partir de <strong>52€</strong></p>
+
+                        <span class="hostingstars">
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                        </span>
+
+                    </article>
+
+                    <article class="hostinglist3">
+                        
+                        <figure class="hostingfigure">
+                            <img src="/Projet2-Reservia/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel-les-mouettes" class="hostingpicture">
+                            <figcaption><h3>Auberge la Cannebière</h3></figcaption>
+                        </figure>
+
+                        <p class="hostingprice">Nuit à partir de <strong>76€</strong></p>
+
+                        <span class="hostingstars">
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star emptystar"></i>
+                        </span>
+
+                    </article>
+
+                    <article class="hostinglist4">
+                        
+                        <figure class="hostingfigure">
+                            <img src="/Projet2-Reservia/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hôtel-de-la-mer" class="hostingpicture">
+                            <figcaption><h3>Hôtel de la mer</h3></figcaption>
+                        </figure>
+
+                        <p class="hostingprice">Nuit à partir de <strong>46€</strong></p>
+
+                        <span class="hostingstars">
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star emptystar"></i>
+                            <i class="fas fa-solid fa-star emptystar"></i>
+                        </span>
+
+                    </article>
+
+                    <article class="hostinglist5">
+                        
+                        <figure class="hostingfigure">
+                            <img src="/Projet2-Reservia/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge-le-panier" class="hostingpicture">
+                            <figcaption><h3>Auberge le panier</h3></figcaption>
+                        </figure>
+
+                        <p class="hostingprice">Nuit à partir de <strong>23€</strong></p>
+
+                        <span class="hostingstars">
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star emptystar"></i>
+                        </span>
+
+                    </article>
+
+                    <article class="hostinglist6">
+                        
+                        <figure class="hostingfigure">
+                            <img src="/Projet2-Reservia/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hôtel-chez-Amina" class="hostingpicture">
+                            <figcaption><h3>Hôtel chez Amina</h3></figcaption>
+                        </figure>
+
+                        <p class="hostingprice">Nuit à partir de <strong>96€</strong></p>
+
+                        <span class="hostingstars">
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                            <i class="fas fa-solid fa-star fullstar"></i>
+                        </span>
+
+                    </article>
+
+                    <a class="showmore" href="#">Afficher plus</a>
+
+                </div>
+
+                    
         
-                <aside class="mostpop">mostpop</aside>
+                <aside class="mostpop">
+
+                    <h2>Les plus populaires</h2>
+
+                </aside>
              
             </section>    
         
             <section id="activities">activities</section>
         
-        </main>    
+        </main>
+        <!--MAIN-->    
 
+        <!--FOOTER-->
         <footer class="footer">footer</footer>
+        <!--FOOTER-->
 
     
 
 </body>
+<!--BODY-->
 
 </html>

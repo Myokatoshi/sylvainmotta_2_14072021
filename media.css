@@ -29,12 +29,8 @@
 
     .buttonresearch
     {
-        width: 60px;
-    }
-
-    .blockbar3
-    {
-        width: 60px;
+        min-width: 60px;
+        max-width: 60px;
     }
 
     .research
