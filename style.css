@@ -54,7 +54,7 @@
 .hostinglobal
 {
     display: grid;
-    grid-template-columns: 2.2fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-areas:
     "hosting mostpop";
     grid-gap: 40px;
@@ -64,12 +64,40 @@
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: max-content;
     grid-template-areas:
     "hostinglobaltitle hostinglobaltitle hostinglobaltitle"
     "hostinglist1 hostinglist2 hostinglist3"
     "hostinglist4 hostinglist5 hostinglist6"
     "showmore showmore showmore";
     grid-gap: 35px;
+}
+
+.mostpop
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    grid-template-areas:
+    "mostpoptitle"
+    "mostpoplist1"
+    "mostpoplist2"
+    "mostpoplist3";
+    grid-gap: 35px;
+}
+
+.activities
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 190px 40px 40px 190px;
+    grid-template-areas:
+    "activitiestitle activitiestitle activitiestitle activitiestitle"
+    "activitieslist1 activitieslist2 activitieslist4 activitieslist5"
+    "activitieslist1 activitieslist2 activitieslist4 ."
+    "activitieslist1 . activitieslist4 activitieslist6"
+    "activitieslist1 activitieslist3 activitieslist4 activitieslist6";
+    column-gap: 40px;
 }
 
 /*Mise en place de grid-area sur les différents blocks de la page*/
@@ -139,11 +167,13 @@
 {
     grid-area: hosting;
     padding: 40px;
+    height: max-content;
 }
 
 .hostinglobal
 {
     grid-area: hostinglobal;
+    height: max-content;
 }
 
 .hostinglist2
@@ -175,16 +205,87 @@
 {
     grid-area: hostinglobaltitle;
     margin: 0;
+    height: max-content;
+}
+
+.mostpoptitle
+{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    height: max-content;
 }
 
 .mostpop
 {
     grid-area: mostpop;
+    padding: 40px;
+    line-height: inherit;
 }
 
-#actvities
+.mostpoplist1
+{
+    grid-area: mostpoplist1;
+}
+
+.mostpoplist2
+{
+    grid-area: mostpoplist2;
+}
+
+.mostpoplist3
+{
+    grid-area: mostpoplist3;
+}
+
+.activities
 {
     grid-area: activities;
+    padding-right: 35px;
+    padding-left: 35px;
+    margin-top: 50px;
+    height: max-content;
+}
+
+.activitiestitle
+{
+    grid-area: activitiestitle;
+}
+
+.activitieslist1
+{
+    grid-area: activitieslist1;
+    margin: 0;
+}
+
+.activitieslist2
+{
+    grid-area: activitieslist2;
+    margin: 0;
+}
+
+.activitieslist3
+{
+    grid-area: activitieslist3;
+    margin: 0;
+}
+
+.activitieslist4
+{
+    grid-area: activitieslist4;
+    margin: 0;
+}
+
+.activitieslist5
+{
+    grid-area: activitieslist5;
+    margin: 0;
+}
+
+.activitieslist6
+{
+    grid-area: activitieslist6;
+    margin: 0;
 }
 
 .footer
@@ -268,6 +369,7 @@ figcaption
 
 h3
 {
+    font-size: 17.5px;
     margin: 0;
 }
 
@@ -587,6 +689,7 @@ h3
     align-items: center;
     padding-right: 35px;
     padding-left: 35px;
+    margin-bottom: 20px;
 }
 
 .info
@@ -619,46 +722,24 @@ h3
     border-radius: 1.5rem;
 }
 
-.hostinglist1
+.hostinglink
 {
-    background-color: white;
-    border-radius: 1.5rem;
-    padding: 6px;
+    text-decoration: none;
+    color: inherit;
 }
 
-.hostinglist2
+.hostinglist1, .hostinglist2, .hostinglist3, .hostinglist4, .hostinglist5, .hostinglist6
 {
     background-color: white;
     border-radius: 1.5rem;
     padding: 6px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 15px #c9c9c9;
 }
 
-.hostinglist3
+.hostinglist1:hover, .hostinglist2:hover, .hostinglist3:hover, .hostinglist4:hover, .hostinglist5:hover, .hostinglist6:hover
 {
-    background-color: white;
-    border-radius: 1.5rem;
-    padding: 6px;
-}
-
-.hostinglist4
-{
-    background-color: white;
-    border-radius: 1.5rem;
-    padding: 6px;
-}
-
-.hostinglist5
-{
-    background-color: white;
-    border-radius: 1.5rem;
-    padding: 6px;
-}
-
-.hostinglist6
-{
-    background-color: white;
-    border-radius: 1.5rem;
-    padding: 6px;
+    transform: scale(1.015);
 }
 
 .hostingfigure
@@ -672,7 +753,6 @@ h3
     height: 120px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
-    
 }
 
 .hostingprice
@@ -693,10 +773,129 @@ h3
     color: inherit;
     font-weight: bold;
     font-size: 20px;
+    height: max-content;
 }
 
 .mostpop
 {
     background-color: #F2F2F2;
-    background: 15xp 15px 15px 15px;
+    border-radius: 1.5rem;
+}
+
+.chart
+{
+    font-size: 25px;
+}
+
+.mostpoplist1, .mostpoplist2, .mostpoplist3
+{
+    background-color: white;
+    border-radius: 1.5rem;
+    padding: 6px;
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    box-shadow: 2px 2px 15px #c9c9c9;
+    position: relative;
+}
+
+.mostpoplist1:hover, .mostpoplist2:hover, .mostpoplist3:hover
+{
+    transform: scale(1.015);
+}
+
+.mostpopfigure
+{
+    display: flex;
+    margin: 0;
+    height: 139.33px;
+}
+
+.mostpopicture
+{
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+}
+
+.mostpoptext
+{
+    margin: 10px 15px 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+.mostpoprice
+{
+    margin: 5px 0 0 0;
+    flex: 1;
+}
+
+.mostpopstars
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mostpoplink
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.activitieslist1, .activitieslist2, .activitieslist3, .activitieslist4, .activitieslist5, .activitieslist6
+{
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 15px #c9c9c9;
+    overflow: hidden;
+}
+
+.activitieslist1:hover, .activitieslist2:hover, .activitieslist3:hover, .activitieslist4:hover, .activitieslist5:hover, .activitieslist6:hover
+{
+    transform: scale(1.015);
+}
+
+.activitiespicturet1, .activitiespicturet2, .activitiespicturet3, .activitiespicturet4, .activitiespicturet5
+{
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    height: 88%;
+    width: 100%;
+    
+}
+
+.activitiespicturet2
+{
+    height: 77%;
+}
+
+.activitiespicturet3
+{
+    height: 71%;
+}
+
+.activitiespicturet4
+{
+    height: 71%;
+}
+
+.activitiespicturet5
+{
+    height: 76%;
+}
+
+.figcaptionact
+{
+    margin: 1rem;
+    margin-top: 10px;
+}
+
+.activitieslink
+{
+    text-decoration: none;
+    color: inherit;
 }
