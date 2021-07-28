@@ -56,7 +56,20 @@
         border-top: none;
     }
 
+    #hosting
+    {
+        background-color: inherit;
+    }
 
+    .mostpop
+    {
+        border-radius: inherit;
+    }
+
+    .hostinglobal
+    {
+        padding: 0;
+    }
 }
 
 /*moyen smartphone paysage + petite tablette portrait*/
@@ -67,25 +80,123 @@
     {
         width: 100%;
     }
+
+    #hosting
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr auto;
+        grid-template-areas:
+        "hostinglobaltitle"
+        "hostinglist1"
+        "hostinglist2"
+        "hostinglist3"
+        "hostinglist4"
+        "hostinglist5"
+        "hostinglist6"
+        "showmore";
+        grid-gap: 35px;
+    }
+
+    #activities
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 250px 250px 250px 250px 250px 250px;
+        grid-template-areas:
+        "activitiestitle"
+        "activitieslist1"
+        "activitieslist2"
+        "activitieslist3"
+        "activitieslist4"
+        "activitieslist5"
+        "activitieslist6";
+        row-gap: 35px;
+    }
 }
 
 /*grand smartphone paysage + moyenne tablette portrait + petite tablette paysage*/
 
 @media only screen and (min-width: 651px) and (max-width: 925px) 
 {
+    #hosting
+    {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: max-content;
+        grid-template-areas:
+        "hostinglobaltitle hostinglobaltitle"
+        "hostinglist1 hostinglist2"
+        "hostinglist3 hostinglist4"
+        "hostinglist5 hostinglist6"
+        "showmore showmore";
+        grid-gap: 35px;
+    }
 
+    #activities
+    {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 250px 250px 250px;
+        grid-template-areas:
+        "activitiestitle activitiestitle"
+        "activitieslist1 activitieslist4"
+        "activitieslist2 activitieslist5"
+        "activitieslist3 activitieslist6";
+        row-gap: 35px;
+    }
 }
 
 /*grande tablette portrait + moyenne tablette paysage*/
 
-@media only screen and (min-width: 926px) and (max-width: 1000px) 
+@media only screen and (min-width: 926px) and (max-width: 1114px) 
 {
-
+    .mostpop
+    {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto 1fr 1fr 1fr;
+        grid-template-areas:
+        "mostpoptitle chart"
+        "mostpoplist1 mostpoplist1"
+        "mostpoplist2 mostpoplist2"
+        "mostpoplist3 mostpoplist3";
+        grid-gap: 35px;
+    }
 }
 
 /*grande tablette portrait et paysage + ecran pc portable et macbook/air*/
 
-@media only screen and (min-width: 1001px) and (max-width: 1430px) 
+@media only screen and (min-width: 926px) and (max-width: 1300px)
 {
-
+    #activities
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 250px 250px;
+        grid-template-areas:
+        "activitiestitle activitiestitle activitiestitle"
+        "activitieslist1 activitieslist2 activitieslist5"
+        "activitieslist4 activitieslist3 activitieslist6";
+        row-gap: 35px;
+    }
 }
+
+@media only screen and (min-width: 1115px) and (max-width: 1430px)
+{
+    .mostpop
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+        "mostpoptitle . chart"
+        "mostpoplist1 mostpoplist2 mostpoplist3";
+        column-gap: 35px;
+    }
+}
+
+@media only screen and (max-width: 1430px) 
+{
+    .hostinglobal
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "mostpop"
+        "hosting";
+        row-gap: 40px;
+    }
+}    
