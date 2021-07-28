@@ -43,7 +43,6 @@
         display: initial;
     }
 
-   
     .linknav
     {
         border-bottom: 3px solid #f2f2f2c5;
@@ -64,6 +63,12 @@
     .mostpop
     {
         border-radius: inherit;
+        box-sizing: border-box;
+    }
+
+    .mostpoptext
+    {
+        max-height: 100px;
     }
 
     .hostinglobal
