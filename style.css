@@ -82,13 +82,7 @@
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 190px 40px 40px 190px;
-    grid-template-areas:
-    "activitiestitle activitiestitle activitiestitle activitiestitle"
-    "activitieslist1 activitieslist2 activitieslist4 activitieslist5"
-    "activitieslist1 activitieslist2 activitieslist4 ."
-    "activitieslist1 . activitieslist4 activitieslist6"
-    "activitieslist1 activitieslist3 activitieslist4 activitieslist6";
+    grid-template-rows: auto 175px 40px 40px 40px 175px;
     column-gap: 40px;
 }
 
@@ -247,48 +241,7 @@
     padding-right: 35px;
     padding-left: 35px;
     margin-top: 50px;
-    height: max-content;
-}
-
-.activitiestitle
-{
-    grid-area: activitiestitle;
-}
-
-.activitieslist1
-{
-    grid-area: activitieslist1;
-    margin: 0;
-}
-
-.activitieslist2
-{
-    grid-area: activitieslist2;
-    margin: 0;
-}
-
-.activitieslist3
-{
-    grid-area: activitieslist3;
-    margin: 0;
-}
-
-.activitieslist4
-{
-    grid-area: activitieslist4;
-    margin: 0;
-}
-
-.activitieslist5
-{
-    grid-area: activitieslist5;
-    margin: 0;
-}
-
-.activitieslist6
-{
-    grid-area: activitieslist6;
-    margin: 0;
+    margin-bottom: 50px;
 }
 
 .footer
@@ -852,12 +805,20 @@ h3
     left: 0;
 }
 
+.activitiestitle
+{
+    grid-column: 1/-1;
+    grid-row: 1;
+}
+
 .activitieslist1, .activitieslist2, .activitieslist3, .activitieslist4, .activitieslist5, .activitieslist6
 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
     border-radius: 1.5rem;
-    box-sizing: border-box;
     box-shadow: 2px 2px 15px #c9c9c9;
-    overflow: hidden;
+    margin: 0;
 }
 
 .activitieslist1:hover, .activitieslist2:hover, .activitieslist3:hover, .activitieslist4:hover, .activitieslist5:hover, .activitieslist6:hover
@@ -865,45 +826,62 @@ h3
     transform: scale(1.015);
 }
 
-.activitiespicturet1, .activitiespicturet2, .activitiespicturet3, .activitiespicturet4, .activitiespicturet5
+.activitieslink
+{   
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.activitiespicture
 {
     object-fit: cover;
     border-radius: 15px 15px 0 0;
-    height: 88%;
+    height: 100%;
     width: 100%;
-    
+}    
+
+.activitieslist1
+{
+    grid-column: 1/2;
+    grid-row: 2/7;
 }
 
-.activitiespicturet2
+.activitieslist2
 {
-    height: 77%;
+    grid-column: 2/3;
+    grid-row: 2/5;
 }
 
-.activitiespicturet3
+.activitieslist3
 {
-    height: 71%;
+    grid-column: 2/3;
+    grid-row: 6/7;
 }
 
-.activitiespicturet4
+.activitieslist4
 {
-    height: 71%;
+    grid-column: 3/4;
+    grid-row: 2/7;
 }
 
-.activitiespicturet5
+.activitieslist5
 {
-    height: 76%;
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+.activitieslist6
+{
+    grid-column: 4/5;
+    grid-row: 4/7;
 }
 
 .figcaptionact
 {
-    margin: 1rem;
-    margin-top: 10px;
-}
-
-.activitieslink
-{
-    text-decoration: none;
-    color: inherit;
+    margin: 1.5rem; 
 }
 
 .footerblock1
@@ -934,10 +912,22 @@ h3
     padding: 0;
 }
 
+li
+{
+    margin: 10px 0 10px 0;
+}
+
 .footerlist
 {
     list-style: none;
-    margin: 10px 0 10px 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+li:hover
+{
+    transform: scale(1.010);
+    text-decoration: underline;
 }
 
 .footercontent
