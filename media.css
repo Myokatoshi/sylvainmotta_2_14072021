@@ -106,15 +106,43 @@
     {
         grid-template-columns: 1fr;
         grid-template-rows: auto 250px 250px 250px 250px 250px 250px;
-        grid-template-areas:
-        "activitiestitle"
-        "activitieslist1"
-        "activitieslist2"
-        "activitieslist3"
-        "activitieslist4"
-        "activitieslist5"
-        "activitieslist6";
-        row-gap: 35px;
+        row-gap: 40px;
+    }
+
+    .activitieslist1
+    {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .activitieslist2
+    {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .activitieslist3
+    {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .activitieslist4
+    {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    .activitieslist5
+    {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+
+    .activitieslist6
+    {
+        grid-column: 1/2;
+        grid-row: 7/8;
     }
 
     .footerblock1
@@ -156,13 +184,44 @@
     #activities
     {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 250px 250px 250px;
-        grid-template-areas:
-        "activitiestitle activitiestitle"
-        "activitieslist1 activitieslist4"
-        "activitieslist2 activitieslist5"
-        "activitieslist3 activitieslist6";
-        row-gap: 35px;
+        grid-template-rows: auto 200px 200px 200px;
+        grid-gap: 40px;
+    }
+
+    .activitieslist1
+    {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .activitieslist2
+    {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .activitieslist3
+    {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .activitieslist4
+    {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .activitieslist5
+    {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+    .activitieslist6
+    {
+        grid-column: 2/3;
+        grid-row: 4/5;
     }
 }
 
@@ -190,12 +249,44 @@
     #activities
     {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto 250px 250px;
-        grid-template-areas:
-        "activitiestitle activitiestitle activitiestitle"
-        "activitieslist1 activitieslist2 activitieslist5"
-        "activitieslist4 activitieslist3 activitieslist6";
-        row-gap: 35px;
+        grid-template-rows: auto 235px 235px;
+        grid-gap: 40px;
+    }
+
+    .activitieslist1
+    {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .activitieslist2
+    {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .activitieslist3
+    {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .activitieslist4
+    {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+    .activitieslist5
+    {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+
+    .activitieslist6
+    {
+        grid-column: 3/4;
+        grid-row: 3/4;
     }
 }
 
