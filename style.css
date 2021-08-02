@@ -41,7 +41,7 @@
     "activities";
 }
 
-/*structuration de la partie 1 du main*/
+/*structuration des parties du main*/
 
 .hostinglobal
 {
@@ -85,6 +85,8 @@
     grid-template-rows: auto 210px 40px 10px 40px 170px;
     column-gap: 40px;
 }
+
+/*structuration du footer*/
 
 .footercontent
 {
@@ -668,6 +670,8 @@ h3
     margin-right: 15px;
 }
 
+/*contenu du hosting*/
+
 .hostinglobal
 {
     padding-right: 35px;
@@ -733,6 +737,8 @@ h3
     font-size: 20px;
     height: max-content;
 }
+
+/*contenu du mostpop*/
 
 .mostpop
 {
@@ -804,6 +810,8 @@ h3
     top: 0;
     left: 0;
 }
+
+/*contenu de activities*/
 
 .activitiestitle
 {
@@ -884,6 +892,8 @@ h3
 {
     margin: 1.5rem; 
 }
+
+/*contenu du footer*/
 
 .footerblock1
 {
